@@ -135,6 +135,7 @@ const Signup = () => {
             )}
           </Button>
         </form>
+        )}
 
         <p className="text-center text-sm" style={{ color: "hsl(220 9% 46%)" }}>
           Already have an account?{" "}
