@@ -3,9 +3,10 @@ import { Leaf } from "lucide-react";
 interface GreenSparkLogoProps {
   variant?: "light" | "dark";
   size?: "sm" | "md" | "lg";
+  iconOnly?: boolean;
 }
 
-const GreenSparkLogo = ({ variant = "light", size = "md" }: GreenSparkLogoProps) => {
+const GreenSparkLogo = ({ variant = "light", size = "md", iconOnly = false }: GreenSparkLogoProps) => {
   const sizeClasses = {
     sm: "text-xl",
     md: "text-2xl",
@@ -26,9 +27,11 @@ const GreenSparkLogo = ({ variant = "light", size = "md" }: GreenSparkLogoProps)
         <Leaf size={iconSizes[size]} className="text-primary" strokeWidth={2.5} />
         <div className="absolute -top-0.5 -right-0.5 h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
       </div>
-      <span className={`font-bold tracking-tight ${sizeClasses[size]} ${textColor}`}>
-        Green<span className="text-primary">Spark</span>
-      </span>
+      {!iconOnly && (
+        <span className={`font-bold tracking-tight ${sizeClasses[size]} ${textColor}`}>
+          Green<span className="text-primary">Spark</span>
+        </span>
+      )}
     </div>
   );
 };
