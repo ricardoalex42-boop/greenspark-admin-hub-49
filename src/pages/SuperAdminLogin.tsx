@@ -54,7 +54,7 @@ const SuperAdminLogin = () => {
           <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
             <Shield className="h-6 w-6 text-primary" />
           </div>
-          <h1 className="text-xl font-semibold text-foreground">Admin Access</h1>
+          <h1 className="text-xl font-semibold text-white">Admin Access</h1>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
