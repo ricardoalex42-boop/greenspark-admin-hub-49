@@ -14,6 +14,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
   if (!loading && session) return <Navigate to="/dashboard" replace />;
@@ -31,6 +32,8 @@ const Signup = () => {
     const result = await signUp(email, password, fullName);
     if (result.error) {
       setError(result.error);
+    } else {
+      setSuccess(true);
     }
     setSubmitting(false);
   };
@@ -45,6 +48,16 @@ const Signup = () => {
           </p>
         </div>
 
+        {success ? (
+          <div className="space-y-4 text-center">
+            <div className="rounded-lg border border-primary/30 bg-primary/10 px-4 py-4 text-sm text-primary">
+              ✓ Account created! Check your email for a confirmation link, then sign in.
+            </div>
+            <Link to="/login" className="inline-block font-medium text-primary hover:underline">
+              Go to Sign in
+            </Link>
+          </div>
+        ) : (
         <form onSubmit={handleSubmit} className="space-y-5">
           {error && (
             <div className="rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-3 text-sm text-destructive">
@@ -122,6 +135,7 @@ const Signup = () => {
             )}
           </Button>
         </form>
+        )}
 
         <p className="text-center text-sm" style={{ color: "hsl(220 9% 46%)" }}>
           Already have an account?{" "}
