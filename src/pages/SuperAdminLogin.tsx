@@ -48,13 +48,13 @@ const SuperAdminLogin = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-background px-4">
+    <div className="flex min-h-screen flex-col items-center justify-center px-4" style={{ background: "hsl(150 30% 9%)" }}>
       <div className="w-full max-w-sm space-y-8">
         <div className="flex flex-col items-center gap-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
             <Shield className="h-6 w-6 text-primary" />
           </div>
-          <h1 className="text-xl font-semibold text-foreground">Admin Access</h1>
+          <h1 className="text-xl font-semibold text-white">Admin Access</h1>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -65,24 +65,26 @@ const SuperAdminLogin = () => {
           )}
 
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email" className="text-sm font-medium" style={{ color: "hsl(210 17% 85%)" }}>Email</Label>
             <Input
               id="email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              className="border-0 bg-[hsl(150_20%_14%)] text-[hsl(210_17%_96%)] placeholder:text-[hsl(220_9%_46%)] focus-visible:ring-primary"
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="password">Password</Label>
+            <Label htmlFor="password" className="text-sm font-medium" style={{ color: "hsl(210 17% 85%)" }}>Password</Label>
             <Input
               id="password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              className="border-0 bg-[hsl(150_20%_14%)] text-[hsl(210_17%_96%)] placeholder:text-[hsl(220_9%_46%)] focus-visible:ring-primary"
             />
           </div>
 
