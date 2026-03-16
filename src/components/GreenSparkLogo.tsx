@@ -3,6 +3,7 @@ import { Leaf } from "lucide-react";
 interface GreenSparkLogoProps {
   variant?: "light" | "dark";
   size?: "sm" | "md" | "lg";
+  iconOnly?: boolean;
 }
 
 const GreenSparkLogo = ({ variant = "light", size = "md" }: GreenSparkLogoProps) => {
