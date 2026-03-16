@@ -65,13 +65,14 @@ const SuperAdminLogin = () => {
           )}
 
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email" className="text-sm font-medium" style={{ color: "hsl(210 17% 85%)" }}>Email</Label>
             <Input
               id="email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              className="border-0 bg-[hsl(150_20%_14%)] text-[hsl(210_17%_96%)] placeholder:text-[hsl(220_9%_46%)] focus-visible:ring-primary"
             />
           </div>
 
