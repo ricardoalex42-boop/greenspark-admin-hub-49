@@ -11,16 +11,21 @@ import Landing from "@/pages/Landing";
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
 import Overview from "@/pages/dashboard/Overview";
-import Compliance from "@/pages/dashboard/Compliance";
-import Batches from "@/pages/dashboard/Batches";
-import Plants from "@/pages/dashboard/Plants";
-import LabTests from "@/pages/dashboard/LabTests";
+import Alerts from "@/pages/dashboard/Alerts";
+import Inspection from "@/pages/dashboard/Inspection";
+import ActivityLog from "@/pages/dashboard/ActivityLog";
 import Documents from "@/pages/dashboard/Documents";
 import SOPs from "@/pages/dashboard/SOPs";
-import Employees from "@/pages/dashboard/Employees";
-import Alerts from "@/pages/dashboard/Alerts";
+import Training from "@/pages/dashboard/Training";
+import Tasks from "@/pages/dashboard/Tasks";
+import LogSheets from "@/pages/dashboard/LogSheets";
+import Plants from "@/pages/dashboard/Plants";
+import LabTests from "@/pages/dashboard/LabTests";
+import Staff from "@/pages/dashboard/Staff";
 import Integrations from "@/pages/dashboard/Integrations";
+import Billing from "@/pages/dashboard/Billing";
 import DashboardSettings from "@/pages/dashboard/DashboardSettings";
+import HelpCenter from "@/pages/dashboard/HelpCenter";
 import SuperAdminLogin from "@/pages/SuperAdminLogin";
 import SuperAdmin from "@/pages/SuperAdmin";
 import NotFound from "@/pages/NotFound";
@@ -49,16 +54,21 @@ const App = () => (
               }
             >
               <Route index element={<Overview />} />
-              <Route path="compliance" element={<Compliance />} />
-              <Route path="batches" element={<Batches />} />
-              <Route path="plants" element={<Plants />} />
-              <Route path="lab-tests" element={<LabTests />} />
+              <Route path="alerts" element={<Alerts />} />
+              <Route path="inspection" element={<Inspection />} />
+              <Route path="activity" element={<ActivityLog />} />
               <Route path="documents" element={<Documents />} />
               <Route path="sops" element={<SOPs />} />
-              <Route path="employees" element={<Employees />} />
-              <Route path="alerts" element={<Alerts />} />
+              <Route path="training" element={<Training />} />
+              <Route path="tasks" element={<Tasks />} />
+              <Route path="logs" element={<LogSheets />} />
+              <Route path="plants" element={<Plants />} />
+              <Route path="lab-tests" element={<LabTests />} />
+              <Route path="staff" element={<Staff />} />
               <Route path="integrations" element={<Integrations />} />
+              <Route path="billing" element={<Billing />} />
               <Route path="settings" element={<DashboardSettings />} />
+              <Route path="help" element={<HelpCenter />} />
             </Route>
 
             <Route path="/super-admin/login" element={<SuperAdminLogin />} />
