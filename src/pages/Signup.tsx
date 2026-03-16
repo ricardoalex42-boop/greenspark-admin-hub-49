@@ -48,6 +48,16 @@ const Signup = () => {
           </p>
         </div>
 
+        {success ? (
+          <div className="space-y-4 text-center">
+            <div className="rounded-lg border border-primary/30 bg-primary/10 px-4 py-4 text-sm text-primary">
+              ✓ Account created! Check your email for a confirmation link, then sign in.
+            </div>
+            <Link to="/login" className="inline-block font-medium text-primary hover:underline">
+              Go to Sign in
+            </Link>
+          </div>
+        ) : (
         <form onSubmit={handleSubmit} className="space-y-5">
           {error && (
             <div className="rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-3 text-sm text-destructive">
