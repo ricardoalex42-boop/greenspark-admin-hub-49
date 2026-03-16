@@ -6,7 +6,7 @@ interface GreenSparkLogoProps {
   iconOnly?: boolean;
 }
 
-const GreenSparkLogo = ({ variant = "light", size = "md" }: GreenSparkLogoProps) => {
+const GreenSparkLogo = ({ variant = "light", size = "md", iconOnly = false }: GreenSparkLogoProps) => {
   const sizeClasses = {
     sm: "text-xl",
     md: "text-2xl",
