@@ -19,6 +19,7 @@ import {
   XCircle,
   Edit,
   Shield,
+  Activity,
 } from "lucide-react";
 
 /* ---------- helpers ---------- */
