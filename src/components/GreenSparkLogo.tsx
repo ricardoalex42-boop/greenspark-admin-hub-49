@@ -27,9 +27,11 @@ const GreenSparkLogo = ({ variant = "light", size = "md", iconOnly = false }: Gr
         <Leaf size={iconSizes[size]} className="text-primary" strokeWidth={2.5} />
         <div className="absolute -top-0.5 -right-0.5 h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
       </div>
-      <span className={`font-bold tracking-tight ${sizeClasses[size]} ${textColor}`}>
-        Green<span className="text-primary">Spark</span>
-      </span>
+      {!iconOnly && (
+        <span className={`font-bold tracking-tight ${sizeClasses[size]} ${textColor}`}>
+          Green<span className="text-primary">Spark</span>
+        </span>
+      )}
     </div>
   );
 };
