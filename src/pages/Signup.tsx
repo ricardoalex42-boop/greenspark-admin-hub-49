@@ -32,6 +32,8 @@ const Signup = () => {
     const result = await signUp(email, password, fullName);
     if (result.error) {
       setError(result.error);
+    } else {
+      setSuccess(true);
     }
     setSubmitting(false);
   };
